@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary: #0d6efd;
+    --secondary: #6c757d;
+    --success: #198754;
+    --dark: #212529;
+    --light: #f8f9fa;
+    --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* --- Login & Register Page Styles --- */
+.auth-bg {
+    /* Uses your local authentic image */
+    background: url('bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.auth-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1;
+}
+
+.auth-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    z-index: 2;
+    overflow: hidden;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.auth-card:hover {
+    transform: translateY(-5px);
+}
+
+.auth-header {
+    background: var(--primary);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* --- Dashboard Styles --- */
+.navbar-custom {
+    background: linear-gradient(to right, #1a2980, #26d0ce);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.stat-card {
+    border: none;
+    border-radius: 15px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.stat-card .icon-bg {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    font-size: 5rem;
+    opacity: 0.3;
+    transform: rotate(-15deg);
+}
+
+.stat-primary { background: linear-gradient(45deg, #4e54c8, #8f94fb); }
+.stat-success { background: linear-gradient(45deg, #11998e, #38ef7d); }
+.stat-warning { background: linear-gradient(45deg, #fce38a, #f38181); }
+.stat-danger  { background: linear-gradient(45deg, #ff416c, #ff4b2b); }
+
+/* --- Table Styles --- */
+.custom-table thead {
+    background: #2c3e50;
+    color: white;
+}
+.custom-table tbody tr {
+    transition: background 0.2s;
+}
+.custom-table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* --- Form Styles --- */
+.form-floating label {
+    color: #6c757d;
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary);
+}
